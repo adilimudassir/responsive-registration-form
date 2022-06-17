@@ -10,6 +10,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-color: hsl(0, 100%, 74%) !important;
+  background-size: cover;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -19,6 +20,9 @@ body {
 
 main {
   max-width: 1440px;
+}
+
+.grid {
   height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -117,7 +121,7 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
-.invalid {
+.invalid:invalid {
   border-color: #dc3545;
   border-width: 2px;
   padding-right: 1rem;
@@ -133,7 +137,6 @@ input[type="submit"]:hover {
   font-weight: 500;
   margin-bottom: 0.1rem;
   font-style: italic;
-  display:none;
 }
 
 form p {
@@ -153,11 +156,18 @@ h1 {
 @media (max-width: 500px), all and (max-width: 770px){
   body {
   background-image: url("images/bg-intro-mobile.png");
+background-position: center;
+  background-repeat: no-repeat;
+  background-color: hsl(0, 100%, 74%) !important;
+  background-size: cover;
 }
 
 main {
   max-width: 375px;
-  display: grid;
+}
+
+.grid {
+   display: grid;
   grid-template-columns: repeat(1, 1fr);
   padding: 1rem 2rem;
   row-gap: 2rem;
